@@ -27,4 +27,18 @@
 	});
     const date = new Date().toUTCString();
   const extractedDateTime = date.slice(5, 16);
-  document.getElementById("extractedDateTime").innerHTML = "Today Match Schedule: " + extractedDateTime;//]]>
+  document.getElementById("extractedDateTime").innerHTML = "Match Schedule: " + extractedDateTime;
+const besok = () => {  // Dapatkan tanggal hari ini
+  let hariIni = new Date();  // Tambahkan 1 ke tanggal (hari ini + 1 = besok)
+  hariIni.setDate(hariIni.getDate() + 1);
+  // Daftar nama bulan  const namaBulan = [
+    "Jan", "Feb", "Mar", "Apr", "Mei", "Jun",    "Jul", "Agu", "Sep", "Okt", "Nov", "Des"
+  ];
+  // Format tanggal menjadi "dd MMM yyyy"  let dd = String(hariIni.getDate()).padStart(2, '0');
+  let mm = namaBulan[hariIni.getMonth()];  let yyyy = hariIni.getFullYear();
+  // Gabungkan format tanggal
+  let tanggalBesok = dd + ' ' + mm + ' ' + yyyy;
+  // Kembalikan hasil dalam format "dd MMM yyyy"  return tanggalBesok;
+};
+// Tampilkan hasil di dalam tag span pada widget besokdocument.querySelector(".tomorrow-date").innerHTML = besok();
+//]]>
