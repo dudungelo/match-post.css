@@ -5,3 +5,21 @@
     text-align: center;
     display: none;
 }
+.sidebar-wrapper,.comments, .zerchpro_header,.header_height,.main_sidebar,.breadcrumb,h1.post_entry_title,.footer_container,.billboard_ads{display:none;}
+main.main_container {
+    width: 100%;
+}
+  .post_body {
+    word-break: break-word;
+    margin-top: 0px;
+}
+.post_outer {
+    padding: 0px;
+}
+#outer-wrapper, .container, #content-wrapper{
+width:100%!important;
+margin:0!imporant;
+padding:0!important;}
+  div#HTML5 {
+    display: none;
+}
